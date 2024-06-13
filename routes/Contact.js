@@ -19,7 +19,7 @@ router.post("/add", async (req, res) => {
       // Changed 11100 to 11000 for the duplicate key error
       res.status(400).json({ msg: "Email already used" });
     } else {
-      res.status(500).json({ msg: "Unable to create new contact" });
+      res.status(500).json({ msg: "Unable to create new contactsssssss" });
     }
   }
 });
@@ -116,7 +116,7 @@ router.delete("/delete/:id", (req, res) => {
     Contact.findByIdAndDelete(id)
       .then((deletedCOntact)=>{
         if (!deletedContact) {
-          return res.status(404).json({ msg: "Unable to connect" });
+          return res.status(404).json({ msg: "Unable to delete" });
         }
       console.log(deletedCOntact);
       res.status(201).json({msg:"deleted contact"})
