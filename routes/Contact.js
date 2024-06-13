@@ -116,7 +116,7 @@ router.delete("/delete/:id", (req, res) => {
     Contact.findByIdAndDelete(id)
       .then((deletedCOntact)=>{
         if (!deletedContact) {
-          return res.status(404).json({ msg: "Contact not found" });
+          return res.status(404).json({ msg: "Unable to connect" });
         }
       console.log(deletedCOntact);
       res.status(201).json({msg:"deleted contact"})
