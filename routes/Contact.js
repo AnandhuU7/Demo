@@ -19,7 +19,7 @@ router.post("/add", async (req, res) => {
       // Changed 11100 to 11000 for the duplicate key error
       res.status(400).json({ msg: "Email already used" });
     } else {
-      res.status(500).json({ msg: "Unable to create new contact" });
+      res.status(500).json({ msg: "Unable to create new contactssss" });
     }
   }
 });
